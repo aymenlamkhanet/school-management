@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Options</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='delet.css')}}">
+</head>
+
+<body>
+    <div id="all">
+        <div id="menu">
+            <a href="http://127.0.0.1:5000/student"><div class="ww">Student</div></a>
+            <a href="http://127.0.0.1:5000/professeur"><div class="ww">professeur</div></a>
+            <a href="http://127.0.0.1:5000/groups"><div class="ww">groups</div></a>
+            <a href="http://127.0.0.1:5000/seance"><div class="ww">seance</div></a>
+            <a href="http://127.0.0.1:5000/utilisateur"><div class="ww">admin</div></a>
+            <a href="http://127.0.0.1:5000/"><div class="ww">log out</div></a>
+        </div>
+        <div>
+            <div class="container1">
+                <div id="options">
+                    <div class="option">
+                        <a href="">Delet a {{Student_prof}}</a>
+                        <p>Delet a {{Student_prof}} from system.</p><br><br>
+                        <form action="" method="POST">
+                            <label for="">Select an ID :</label>
+                            <input type="number" min="1" name="Id">
+                            <br><br>
+                            <input type="submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            {% if condition =='true'%}
+            <div class="container2">
+                <div class="hh">
+                    <table border="3">
+                        <td>id admin</td>                                     
+                        <td>email </td>                                   
+                        {%for admin in admins %}
+                        <tr>
+                            <td>{{admin[0]}}</td>
+                            <td>{{admin[1]}}</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+
+</html>
+

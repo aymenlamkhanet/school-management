@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Options</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='viewstudent.css')}}">
+</head>
+
+<body>
+    <div id="all">
+        <div id="menu">
+            <a href="http://127.0.0.1:5000/student">
+                <div class="ww">Student</div>
+            </a>
+            <a href="http://127.0.0.1:5000/professeur">
+                <div class="ww">professeur</div>
+            </a>
+            <a href="http://127.0.0.1:5000/groups">
+                <div class="ww">groups</div>
+            </a>
+            <a href="http://127.0.0.1:5000/seance">
+                <div class="ww">seance</div>
+            </a>
+            <a href="http://127.0.0.1:5000/utilisateur">
+                <div class="ww">admin</div>
+            </a>
+            <a href="http://127.0.0.1:5000/">
+                <div class="ww">log out</div>
+            </a>
+        </div>
+        <div class="container">
+            <div class="options">
+                <div id="ordeeleve">
+                    <form action="" method="POST">
+                        <label><strong>First_Name :</strong></label>
+                        <input type="text" name="First_Name">
+                        <label><strong>Last_Name :</strong></label>
+                        <input type="text" name="Last_Name"><br>
+                        <input type="submit" id="submit" name="submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="hh">
+                {% if condition == "true" %}
+                <table border="3">
+                    <td>id eleve</td>                                     
+                    <td>nom eleve </td>                                   
+                    <td>prenom eleve </td>
+                    <td>niveau scolaire </td>
+                    <td> email</td>
+                    <td>telephone</td>
+                    <td>paiment</td>
+                    {%for eleve in eleves %}
+                    <tr>
+                        <td>{{eleve[0]}}</td>
+                        <td>{{eleve[1]}}</td>
+                        <td>{{eleve[2]}}</td>
+                        <td>{{eleve[3]}}</td>
+                        <td>{{eleve[4]}}</td>
+                        <td>{{eleve[5]}}</td>
+                        <td>{{eleve[6]}}</td>
+                    </tr>
+                    {% endfor %}
+                 </table>
+                {% else %}
+                <table border="3">
+                    <td>id eleve</td>                                     
+                    <td>nom eleve </td>                                   
+                    <td>prenom eleve </td>
+                    <td>tel </td>
+                    <td> email </td>
+                    <td>niveau scolaire </td>
+                    <td>id groupe  </td>
+                    <td>num groupe </td>
+                    <td>formation </td>
+                    <td> nbr seance restante </td>
+                    <td> nbr senace abscente </td>
+                    {% if eleve_info_skill  %}
+                    {%for info in eleve_info_skill%}
+                    <tr>
+                        <td>{{info[0]}}</td>
+                        <td>{{info[1]}}</td>
+                        <td>{{info[2]}}</td>
+                        <td>{{info[3]}}</td>
+                        <td>{{info[4]}}</td>
+                        <td>{{info[5]}}</td>
+                        <td>{{info[6]}}</td>
+                        <td>{{info[7]}}</td>
+                        <td>{{info[8]}}</td>
+                        <td>{{info[9]}}</td>
+                        <td>{{info[10]}}</td>
+                    </tr>
+                    {% endfor %}
+                    {% endif %}
+                    {% if eleve_info_langue %}
+                    {%for info in eleve_info_langue%}
+                    <tr>
+                        <td>{{info[0]}}</td>
+                        <td>{{info[1]}}</td>
+                        <td>{{info[2]}}</td>
+                        <td>{{info[3]}}</td>
+                        <td>{{info[4]}}</td>
+                        <td>{{info[5]}}</td>
+                        <td>{{info[6]}}</td>
+                        <td>{{info[7]}}</td>
+                        <td>{{info[8]}}</td>
+                        <td>{{info[9]}}</td>
+                        <td>{{info[10]}}</td>
+                    </tr>
+                    {% endfor %}
+                    {% endif %}
+                    {% if eleve_info_langue %}
+                    {%for info in eleve_info_matiere%}
+                    <tr>
+                        <td>{{info[0]}}</td>
+                        <td>{{info[1]}}</td>
+                        <td>{{info[2]}}</td>
+                        <td>{{info[3]}}</td>
+                        <td>{{info[4]}}</td>
+                        <td>{{info[5]}}</td>
+                        <td>{{info[6]}}</td>
+                        <td>{{info[7]}}</td>
+                        <td>{{info[8]}}</td>
+                        <td>{{info[9]}}</td>
+                        <td>{{info[10]}}</td>
+                    </tr>
+                    {% endfor %}
+                    {% endif %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

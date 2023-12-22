@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Options</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='viewgroup.css')}}">
+</head>
+
+<body>
+    <div id="all">
+        <div id="menu">
+            <a href="http://127.0.0.1:5000/student">
+                <div class="ww">Student</div>
+            </a>
+            <a href="http://127.0.0.1:5000/professeur">
+                <div class="ww">professeur</div>
+            </a>
+            <a href="http://127.0.0.1:5000/groups">
+                <div class="ww">groups</div>
+            </a>
+            <a href="http://127.0.0.1:5000/seance">
+                <div class="ww">seance</div>
+            </a>
+            <a href="http://127.0.0.1:5000/utilisateur">
+                <div class="ww">admin</div>
+            </a>
+            <a href="http://127.0.0.1:5000/">
+                <div class="ww">log out</div>
+            </a>
+        </div>
+        <div class="container">
+            <div class="options">
+                <div id="ordeeleve">
+                    <form action="" method="POST">
+                        <label><strong>Num_group :</strong></label>
+                        <input type="text" name="groupe_number">
+
+                        
+                            <label for="schoolLevelSelect">School Level:</label>
+                            <select id="schoolLevelSelect" name="schoolLevelSelect" onchange="handleSchoolLevelChange()">
+                                <option value="none" selected disabled>Select a Level</option>
+                                <option value="first year Secondaire">First year Secondaire</option>
+                                <option value="Second year Secondaire">Second year Secondaire</option>
+                                <option value="Third year Secondaire">Third year Secondaire</option>
+                                <option value="first year High School">First year High School</option>
+                                <option value="Second year High School">Second year High School</option>
+                                <option value="Third year High School">Third year High School</option>
+                                <option value="none">none</option>
+                            </select>
+                        
+
+                        
+                            <label for="formation">Formation:</label>
+                            <select id="formation" name="formation">
+                                <option value="English">English</option>
+                                <option value="French">French</option>
+                                <option value="Spanish">Spanish</option>
+                                <option value="C">C</option>
+                                <option value="C++">C++</option>
+                                <option value="Python">Python</option>
+                                <option value="Maths">Maths</option>
+                                <option value="PC">PC</option>
+                                <option value="SVT">SVT</option>
+                                <option value="Arabic">Arabic</option>
+                                <option value="Frensh 1st">Frensh 1st</option>
+                                <option value="History">History</option>
+                                <option value="Islamic Education">Islamic Education</option>
+                                <option value="Philo">Philo</option>
+                                <option value="Engslish">Engslish</option>
+                            </select>
+                        <br>
+
+                        <input type="submit" id="submit">
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="hh">
+                {% if condition =='true'%}
+                <table border="3">
+                    <td>id group</td>
+                    <td>num groupe</td>
+                    <td>nombre eleve </td>
+                    <td>id enseignant </td>
+                    <td>niveau scolaire </td>
+                    <td> specialite </td>
+                    {%for group in groups %}
+                    <tr>
+                        <td>{{group[0]}}</td>
+                        <td>{{group[1]}}</td>
+                        <td>{{group[2]}}</td>
+                        <td>{{group[3]}}</td>
+                        <td>{{group[4]}}</td>
+                        <td>{{group[5]}}</td>
+                    </tr>
+                    {% endfor %}
+                 </table>
+                 {% else %}
+                 <table border="3">
+                    <td>id eleve </td>
+                    <td>nom eleve </td>
+                    <td>prenom</td>
+                    {%for eleve in list_elv %}
+                    <tr>
+                        <td>{{eleve[0]}}</td>
+                        <td>{{eleve[1]}}</td>
+                        <td>{{eleve[2]}}</td>
+                    </tr>
+                    {% endfor %}
+                {% endif %}    
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

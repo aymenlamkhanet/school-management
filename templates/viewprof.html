@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Options</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='viewprof.css')}}">
+</head>
+
+<body>
+    <div id="all">
+        <div id="menu">
+            <a href="http://127.0.0.1:5000/student">
+                <div class="ww">Student</div>
+            </a>
+            <a href="http://127.0.0.1:5000/professeur">
+                <div class="ww">professeur</div>
+            </a>
+            <a href="http://127.0.0.1:5000/groups">
+                <div class="ww">groups</div>
+            </a>
+            <a href="http://127.0.0.1:5000/seance">
+                <div class="ww">seance</div>
+            </a>
+            <a href="http://127.0.0.1:5000/utilisateur">
+                <div class="ww">admin</div>
+            </a>
+            <a href="http://127.0.0.1:5000/">
+                <div class="ww">log out</div>
+            </a>
+        </div>
+        <div class="container">
+            <div class="options">
+                <div id="ordeeleve">
+                    <form action=""  method="POST">
+                        <label><strong>First_Name :</strong></label>
+                        <input type="text" name="FirstName">
+                        <label><strong>Last_Name :</strong></label>
+                        <input type="text" name="LastName"><br>
+                        <input type="submit" id="submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="hh">
+            {% if condition =='true'%}
+             <table border="3">
+                <td>id prof</td>
+                <td>nom prof</td>
+                <td>prenom prof </td>
+                <td>email prof</td>
+                <td>telephone prof </td>
+                <td>specialite prof</td>
+                <td> nbr de groupe enseignés</td>
+                {%for prof in profs %}
+                <tr>
+                    <td>{{prof[0]}}</td>
+                    <td>{{prof[1]}}</td>
+                    <td>{{prof[2]}}</td>
+                    <td>{{prof[3]}}</td>
+                    <td>{{prof[4]}}</td>
+                    <td>{{prof[5]}}</td>
+                    <td>{{prof[6]}}</td>
+                </tr>
+                {% endfor %}
+             </table>
+            
+            {% else %}
+            <table border="3">
+                <td>nom enseignant</td>
+                <td>prenom enseignant</td>
+                <td>specialite  </td>
+                <td>group num</td>
+                <td>niveau scolaire du groupe  </td>
+                {%for inf in prof %}
+                <tr>
+                    <td>{{inf[0]}}</td>
+                    <td>{{inf[1]}}</td>
+                    <td>{{inf[2]}}</td>
+                    <td>{{inf[3]}}</td>
+                    <td>{{inf[4]}}</td>
+                </tr>
+                {% endfor %}
+             </table>
+             {% endif %}
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

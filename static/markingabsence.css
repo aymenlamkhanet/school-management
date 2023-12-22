@@ -1,0 +1,74 @@
+/* Styles for the addElement.html page */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #000000, #000000);
+    margin: 0;
+}
+
+#all {
+    display: grid;
+    grid-template-rows: auto; /* Adjusted to accommodate dynamic content */
+    background-size: cover;
+}
+
+#newElement {
+    background-color: #000000;
+    border: 1px solid white;
+    filter: drop-shadow(2px 2px 7px #F4CE14);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    margin-top: 100px;
+    width: 700px; /* Adjusted to limit width for better readability */
+}
+
+#newElement h2 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 20px;
+    filter: drop-shadow(2px 2px 7px #F4CE14);
+}
+
+#newElementForm {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+#newElementForm label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #ffffff;
+    filter: drop-shadow(1px 1px 1px #F4CE14);
+}
+
+#newElementForm input,
+#newElementForm select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+#newElementForm input[type="submit"] {
+    background-color: #F4CE14;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+
+#newElementForm select {
+    cursor: pointer;
+}
+
+
+
+
+
+

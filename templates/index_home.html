@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> School</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style_home.css')}}">
+</head>
+
+<body>
+    <div id="all">
+        <div id="first">
+            <div id="heading">
+                <div id="hh" class="options" style="background-color:#F4CE14"></div>
+                <div id="home" class="options"><a href="http://127.0.0.1:5000/">
+                        <h4>Home </h4>
+                    </a></div>
+                <div id="classes" class="options"> <a href="http://127.0.0.1:5000/classe">
+                        <h4>Classes </h4>
+                    </a></div>
+                <div id="contact" class="options"> <a href="http://127.0.0.1:5000/contact">
+                        <h4>contact </h4>
+                    </a></div>
+                <div id="admin" class="options"> <a href="http://127.0.0.1:5000/admin">
+                        <h4>Admin </h4>
+                    </a> </div>
+            </div>
+
+            <div id="Title">
+                <h1 class="s"><strong class="tito">Learning</strong> as we grow,</h1>
+                <h1>Growing as we <strong  class="tito">learn</strong></h1>
+            </div>
+
+            <div id="meadle">
+                <table>
+                    <tr>
+                        <td>
+                           <div class="logo">
+                            <img src="{{ url_for('static', filename='hilal_logo.jpg')}}" height="350px", width="350px">
+                           </div>
+                        </td>
+                        <td>
+                            
+                            <p>🌟 Welcome to <strong>Hilal Center</strong> Extra Hours School, where boundless learning meets excellence.
+                                Our tailored programs, led by experienced educators, cater to individual learning needs. 
+                                We embrace a comprehensive approach, fostering not only academic excellence but also crucial
+                                life skills and language mastery. Enroll today and unleash the extraordinary in education! 🚀 
+                                <br><br><br><br><br><br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+                <br><br><br>
+            </div>
+            <div id="foot">
+                <h3>Growing as we learn,Learning as we grow</h3>
+                <footer>@ 2023.All rights reserved.ENSAKH</footer>
+                <br><br><br><br>
+            </div>
+        </div>
+</body>
+
+</html>

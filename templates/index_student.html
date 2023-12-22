@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Options</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style_student.css')}}">
+</head>
+
+<body>
+    <div id="all">
+        <div id="menu">
+            <a href="http://127.0.0.1:5000/student"><div class="ww">Student</div></a>
+            <a href="http://127.0.0.1:5000/professeur"><div class="ww">professeur</div></a>
+            <a href="http://127.0.0.1:5000/groups"><div class="ww">groups</div></a>
+            <a href="http://127.0.0.1:5000/seance"><div class="ww">seance</div></a>
+            <a href="http://127.0.0.1:5000/utilisateur"><div class="ww">admin</div></a>
+            <a href="http://127.0.0.1:5000/"><div class="ww">log out</div></a>
+        </div>
+        <div class="container">
+            <div id="options">
+                <h2>Select an Option</h2>
+                <div class="option">
+                    <a href="http://127.0.0.1:5000/addstudent">Add a New Student</a>
+                    <p>Add a new Student to the system.</p>
+                </div>
+                <div class="option">
+                    <a href="http://127.0.0.1:5000/viewstudent">View Existing Student</a>
+                    <p>View details of an existing Student.</p>
+                </div>
+                <div class="option">
+                    <a href="http://127.0.0.1:5000/modifynewformation">Modify Existing Student</a>
+                    <p>Add a Formation to a Student .</p>
+                </div>
+                <div class="option">
+                    <a href="http://127.0.0.1:5000/deletestudent">Delete Existing Student</a>
+                    <p>Deleting an existing Student.</p>
+                </div>
+                <div class="option">
+                    <a href="http://127.0.0.1:5000/payment_renewal">payment renewal</a>
+                    <p>payment renewal process update.</p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
+

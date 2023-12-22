@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Element - Index School</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='addadmin.css')}}">
+</head>
+
+<body>
+    <div id="all">
+            <div id="login">
+                <form id="loginForm" action="" method="POST" onsubmit="validateForm();">
+                    <h2><strong>New Admin :</strong></h2><br>
+                    <label>Email :</label>
+                    <input type="email" name="email" id="email" required><br><br><br>
+                    <label>Password :</label>
+                    <input type="password" name="password" id="password" required><br><br><br>
+                    <label>Confirm :</label>
+                    <input type="password" name="password2" id="password" required>
+                    <input id="submit" type="submit">
+                </form>
+            </div>
+    </div>
+</body>
+
+</html>
+

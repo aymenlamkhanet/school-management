@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Table</title>
+</head>
+
+<body>
+    <h1>Attendance Table</h1>
+    <form action="" method="POST">
+    <table border="1">
+        <thead>
+            <tr>
+              <th>id eleve </th>
+              <th>nom eleve </th>
+              <th>prenom eleve </th>
+              <th>num group </th>
+              <th>formation </th>
+              <th>absent ? </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for eleve in list_eleve %}
+                <tr>
+                    <td>{{eleve[0]}}</td>
+                    <td>{{eleve[1]}}</td>
+                    <td>{{eleve[2]}}</td>
+                    <td>{{eleve[3]}}</td>
+                    <td>{{eleve[4]}}</td>
+                    <td>
+
+                            <input type="checkbox" name="absent_students" value="{{eleve[0]}}">
+                        
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br><br><br><input type="submit" value="Submit">
+</form>
+</body>
+
+</html>

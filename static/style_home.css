@@ -1,0 +1,161 @@
+#all{
+    display: grid;
+    grid-template-rows: 4000px ;
+    background-color: #E0F4FF;
+}
+.tito{
+    background: linear-gradient(to right, #87C4FF, #FFEED9, #FFEED9, #87C4FF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 130%;
+}
+
+#heading{
+    display: flex;
+    height: 100px;
+    
+}
+
+li{
+    color: #000000;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+.options a:hover h4 {
+    color: white; /* Change the color to your desired hover color */
+}
+
+
+
+
+#hh{
+    flex: 0.5;
+}
+.options{
+    padding: 0%;
+    height: 50px;
+    background-color: #86E5FF;
+    margin-top: 20px;
+    align-items: center;
+    flex: 2;
+}
+
+
+table{
+    margin-top: 90px;
+}
+
+#photo{
+    position: relative;
+    border: 20px;
+    margin-right: 80px;
+}
+
+
+.s{
+    margin-top: 50px;
+}
+
+h4{
+    text-align: center;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    font-family: cursive;
+    margin: 20px;
+    font-size: 20px;
+    
+}
+
+
+#first{
+    background-size: cover;
+}
+
+#Title{
+    align-items:center;
+    background: linear-gradient(to right, #87C4FF, #FFEED9, #FFEED9, #87C4FF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-top:30px;
+    margin-bottom: 20px;
+    filter: drop-shadow(2px 2px 2px #0c5fcc);
+}
+
+#Title > h1 {
+    text-align:center;
+    font-weight:bolder;
+    font-family:Arial;
+    font-size: 80px;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #ffffff, #ffffff, #2e2e2b, #ffffff ,#ffffff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.1));
+}
+
+#Title > .s{
+    margin-top: 150px;
+}
+
+
+
+p{
+    font-weight: 300;
+    font-size: 22px;
+    padding-left: 30px;
+    font-family: cursive;
+    color: #000000;
+    margin-top: 250px;
+}
+
+@keyframes anim-div{
+    0%{transform:scale(0.5);}
+    100%{transform:scale(1.5);}
+}
+
+#Title{
+    animation: anim-div 2s 1 ;
+}
+
+@keyframes anim-div1{
+    0%{transform:rotate(90deg);}
+    100%{transform:scaleX(1);}
+}
+
+.logo{
+    animation: anim-div1 2s 1 ;
+}
+
+
+
+#foot{
+    align-items: center;
+    position: relative;
+}
+
+
+h3{
+    background: linear-gradient(to right, #87C4FF, #0c5fcc, #87C4FF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 130%;
+    text-align:center;
+    font-weight:bolder;
+    font-family:Arial;
+    font-size: 70px;
+    margin-bottom: 20px;
+    -webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.2));
+}
+
+footer{
+    margin-top: 300px;
+    color: #ffffff;
+}

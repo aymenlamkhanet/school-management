@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Element - Index School</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='addgroup.css')}}">
+</head>
+
+<body>
+    <div id="all">
+        <div id="newElement">
+            <h2>Add a New Group :</h2>
+            <form action="" method="POST" id="newElementForm">
+                <!-- <label for="Num_group">Num_group:</label>
+                <input type="text" id="Num_group" name="Num_group" required> -->
+                <label for="formation">Formation:</label>
+                <select id="formation" name="formation"  required>
+                    <option value="none" selected disabled>Select a formation</option>
+                    <option value="language">langue</option>
+                    <option value="softSkills">skills</option>
+                    <option value="schoolSupport">school support</option>
+                </select>
+
+                <div id="language" style="display:none;">
+                    <label for="languageSelect">language</label>
+                    <select id="languageSelect" name="languageSelect" onchange="handlelanguageChange()" >
+                        <option value="none" selected disabled>Select a Language</option>
+                        <option value="English">English</option>
+                        <option value="French">French</option>
+                        <option value="Spanish">Spanish</option>
+                    </select>
+                </div>
+                
+                <div id="Skills" style="display:none;">
+                    <label for="SkillsSelect">Skills</label>
+                    <select id="SkillsSelect" name="SkillsSelect" onchange="handleSkillsChange() " >
+                        <option value="none" selected disabled>Select a Skills</option>
+                        <option value="C">C</option>
+                        <option value="C++">C++</option>
+                        <option value="Python">Python</option>
+                    </select>
+                </div>
+
+                <div id="schoolLevel" style="display:none;">
+                    <label for="schoolLevelSelect">School Level:</label>
+                    <select id="schoolLevelSelect" name="schoolLevelSelect" onchange="handleSchoolLevelChange()" >
+                        <option value="none" selected disabled>Select a Level</option>
+                        <option value="first year Secondaire">First year Secondaire</option>
+                        <option value="Second year Secondaire">Second year Secondaire</option>
+                        <option value="Third year Secondaire">Third year Secondaire</option>
+                        <option value="first year High School">First year High School</option>
+                        <option value="Second year High School">Second year High School</option>
+                        <option value="Third year High School">Third year High School</option>
+                    </select>
+                </div>
+                <div id="schoolSubjects" style="display:none;">
+                    <label for="schoolSubjectSelect">School Subjects:</label>
+                    <select id="schoolSubjectSelect" name="schoolSubjectSelect" >
+        
+                        <option value="none" selected disabled>Select a Subject</option>
+                    </select>
+                </div>
+
+                <script>
+                    
+                        document.getElementById('formation').addEventListener('change', function() {
+                            var languageDiv = document.getElementById('language');
+                            if (this.value === 'language') {
+                                languageDiv.style.display = 'block';
+                            } else {
+                                languageDiv.style.display = 'none';
+                            }
+                        });
+
+                        document.getElementById('formation').addEventListener('change', function() {
+                            var SkillsDiv = document.getElementById('Skills');
+                            if (this.value === 'softSkills') {
+                                SkillsDiv.style.display = 'block';
+                            } else {
+                                SkillsDiv.style.display = 'none';
+                            }
+                        });
+                        
+                        
+    
+                    document.getElementById('formation').addEventListener('change', function() {
+                        var schoolLevelDiv = document.getElementById('schoolLevel');
+                        if (this.value === 'schoolSupport') {
+                            schoolLevelDiv.style.display = 'block';
+                        } else {
+                            schoolLevelDiv.style.display = 'none';
+                        }
+                    });
+
+                    function handleSchoolLevelChange() {
+                        // Get selected school level
+                        var schoolLevelSelect = document.getElementById("schoolLevelSelect");
+                        var selectedSchoolLevel = schoolLevelSelect.value;
+                        // Get the school subjects select element
+                        var schoolSubjectSelect = document.getElementById("schoolSubjectSelect");
+                        // Clear existing options
+                        schoolSubjectSelect.innerHTML =
+                            '<option value="none" selected disabled>Select a Subject</option>';
+                        // Add options based on the selected school level
+                        if (selectedSchoolLevel.includes("High School")) {
+                            // High School subjects
+                            addOption(schoolSubjectSelect, "Maths");
+                            addOption(schoolSubjectSelect, "PC");
+                            addOption(schoolSubjectSelect, "SVT");
+                            // Additional subjects for specific years
+                            if (selectedSchoolLevel.includes("Second year")) {
+                                addOption(schoolSubjectSelect, "Arabic");
+                                addOption(schoolSubjectSelect, "French 1st");
+                                addOption(schoolSubjectSelect, "History");
+                                addOption(schoolSubjectSelect, "Islamic Education");
+                            }
+
+                            if (selectedSchoolLevel.includes("Third year")) {
+                                addOption(schoolSubjectSelect, "Philo");
+                                addOption(schoolSubjectSelect, "English 2nd");
+                            }
+                        }
+                        if (selectedSchoolLevel.includes("Secondaire")) {
+                            // High School subjects
+                            addOption(schoolSubjectSelect, "Maths");
+                            addOption(schoolSubjectSelect, "PC");
+                            addOption(schoolSubjectSelect, "SVT");
+                        }
+                        // Show the school subjects div
+                        document.getElementById("schoolSubjects").style.display = "block";
+                    }
+
+                    function addOption(selectElement, optionText) {
+                        var option = document.createElement("option");
+                        option.value = optionText.toLowerCase();
+                        option.text = optionText;
+                        selectElement.add(option);
+                    }
+
+
+                   
+                </script>
+
+             
+
+                <input type="submit" value="Add Element">
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

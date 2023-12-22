@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style_login.css')}}">
+</head>
+
+<body>
+    <div class="all">
+        <a href="http://127.0.0.1:5000/"><div id="back"><h5>back</h5></div></a>
+        
+        <div id="login">
+            <form id="loginForm" action="" method="POST" >
+                <h2><strong>User Login :</strong></h2><br>
+                <label>email :</label>
+                <input type="email" name="email" id="email"  value="bziyati11@gmail.com" required><br><br><br>
+                <label>Password :</label>
+                <input type="password" name="password" id="password " value="badrbadr" required>
+                <input id="submit" type="submit" onclick="func()">
+                <input type="reset" id="reset">
+            </form>
+        </div>
+    </div>
+
+    <!-- <script src="script.js"></script> -->
+</body>
+<!-- <script>
+    function func(){
+        localStorage.setItem('alertShown',false)
+        console.log("im inside")
+    }
+    
+</script> -->
+</html>

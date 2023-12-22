@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='integrerstyle.css')}}">
+</head>
+<body>
+    <div class="all">
+        <div class="hh">
+            <table border="3">
+                <td>id group</td>
+                <td>num groupe</td>
+                <td>nombre eleve </td>
+                <td>id enseignant </td>
+                <td>niveau scolaire </td>
+                <td> formation </td>
+                {%for group in groups %}
+                <tr>
+                    <td>{{group[0]}}</td>
+                    <td>{{group[1]}}</td>
+                    <td>{{group[2]}}</td>
+                    <td>{{group[3]}}</td>
+                    <td>{{group[4]}}</td>
+                    <td>{{group[5]}}</td>
+                </tr>
+                {% endfor %}
+             </table>
+        </div>
+        <div>
+            <br><br><br><br>
+            <div>
+                <div>
+                    <div class="hhh">
+                        <form action="" method="POST">
+                            <label for="">Select an ID of the group:</label>
+                            <input type="number" min="1" name="Id">
+                            <br><br>
+                            <input type="submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </div>
+</body>
+</html>

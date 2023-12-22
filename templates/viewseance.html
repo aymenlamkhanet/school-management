@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Options</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='viewseance.css')}}" >
+</head>
+
+<body>
+    <div id="all">
+        <div id="menu">
+            <a href="http://127.0.0.1:5000/student">
+                <div class="ww">Student</div>
+            </a>
+            <a href="http://127.0.0.1:5000/professeur">
+                <div class="ww">professeur</div>
+            </a>
+            <a href="http://127.0.0.1:5000/groups">
+                <div class="ww">groups</div>
+            </a>
+            <a href="http://127.0.0.1:5000/seance">
+                <div class="ww">seance</div>
+            </a>
+            <a href="http://127.0.0.1:5000/utilisateur">
+                <div class="ww">admin</div>
+            </a>
+            <a href="http://127.0.0.1:5000/">
+                <div class="ww">log out</div>
+            </a>
+        </div>
+        <div class="container">
+            <div class="options">
+                <div id="ordeeleve">
+                    <form action="" method="POST">
+                        <label><strong>Salle :</strong></label>
+                        <input type="number" name="salle">
+                        <label><strong>Date :</strong></label>
+                        <input type="date" name="date">
+                        <label><strong>groupe :</strong></label>
+                        <input type="number" name="groupe">
+                        <div id="schoolLevel">
+                            <label for="schoolLevelSelect"><strong>School Level:</strong></label>
+                            <select id="schoolLevelSelect" name="schoolLevelSelect">
+                                <option value="none" >Select a Level</option>
+                                <option value="first year Secondaire">First year Secondaire</option>
+                                <option value="Second year Secondaire">Second year Secondaire</option>
+                                <option value="Third year Secondaire">Third year Secondaire</option>
+                                <option value="first year High School">First year High School</option>
+                                <option value="Second year High School">Second year High School</option>
+                                <option value="Third year High School">Third year High School</option>
+                                <option value="none">None</option>
+                            </select>
+                        </div>
+
+                        <div id="schoolSubject">
+                            <label for="formation">Formation:</label>
+                            <select id="formation" name="formation">
+                                <option value="none" >Select a formation</option>
+                                <option value="English">English</option>
+                                <option value="French">French</option>
+                                <option value="Spanish">Spanish</option>
+                                <option value="C">C</option>
+                                <option value="C++">C++</option>
+                                <option value="Python">Python</option>
+                                <option value="Maths">Maths</option>
+                                <option value="PC">PC</option>
+                                <option value="SVT">SVT</option>
+                                <option value="Arabic">Arabic</option>
+                                <option value="Frensh 1st">Frensh 1st</option>
+                                <option value="History">History</option>
+                                <option value="Islamic Education">Islamic Education</option>
+                                <option value="Philo">Philo</option>
+                                <option value="Engslish 2nd">Engslish 2nd</option>
+                            </select>
+                        </div>
+                        <br><br>
+                        <input type="submit" id="submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+            {% if condition == 'true' %}
+        <div class="container  tableau">
+            <div class="hh">
+               <table border="3">
+                <td>id seance</td>
+                <td>date seance  </td>
+                <td>heure debut  </td>
+                <td>heure fin  </td>
+                <td>num groupe  </td>
+                <td>niveau scolaire </td>
+                <td>salle </td>
+                <td>formation </td>
+                
+                    {%for seance in seances %}
+                <tr>
+                    <td>{{seance[0]}}</td>
+                    <td>{{seance[1]}}</td>
+                    <td>{{seance[2]}}</td>
+                    <td>{{seance[3]}}</td>
+                    <td>{{seance[4]}}</td>
+                    <td>{{seance[5]}}</td>
+                    <td>{{seance[6]}}</td>
+                    <td>{{seance[7]}}</td>
+                </tr>
+                {% endfor %}
+               </table>
+            </div>
+        </div>
+        {% endif %}
+        
+    </div>
+</body>
+
+</html>

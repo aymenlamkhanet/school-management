@@ -1,0 +1,72 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #176B87;
+    margin: 0;
+}
+
+#all {
+    display: grid;
+    grid-template-rows: auto; /* Adjusted to accommodate dynamic content */
+}
+
+#newElement {
+    border: 2px solid #016A70;
+    color: #000000;
+    background-color: #E0F4FF;
+    filter: drop-shadow(2px 2px 7px #141E46);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    margin-top: 100px;
+    width: 500px; /* Adjusted to limit width for better readability */
+}
+
+#newElement h2 {
+    text-align: center;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+#newElementForm {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+#newElementForm label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #000000;
+   
+}
+
+#newElementForm input,
+#newElementForm select {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#newElementForm input[type="submit"] {
+    background-color: #176B87;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button{
+    height: 30px;
+    background-color: #176B87;
+}
+
+#newElementForm select {
+    cursor: pointer;
+}
+
+
+
+
+
+

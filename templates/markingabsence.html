@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Element - Index School</title>
+    <link rel="stylesheet" href=".{{url_for('static',filename='addstudentstyle.css')}}">
+</head>
+
+<body>
+    <div id="all">
+        <div id="newElement">
+            <h2>Add a New Element:</h2>
+            <form action="" method="POST" id="newElementForm">
+                <label for="Num_group">Num_group:</label>
+                <input type="text" id="Num_group" name="Num_group" required>
+
+                <div id="schoolSubject">
+                    <label for="formation">Formation:</label>
+                    <select id="formation" name="formation">
+                        <option value="English">English</option>
+                        <option value="French">French</option>
+                        <option value="Spanish">Spanish</option>
+                        <option value="C">C</option>
+                        <option value="C++">C++</option>
+                        <option value="Python">Python</option>
+                        <option value="Maths">Maths</option>
+                        <option value="PC">PC</option>
+                        <option value="SVT">SVT</option>
+                        <option value="Arabic">Arabic</option>
+                        <option value="Frensh 1st">Frensh 1st</option>
+                        <option value="History">History</option>
+                        <option value="Islamic Education">Islamic Education</option>
+                        <option value="Philo">Philo</option>
+                        <option value="Engslish 2nd">Engslish</option>
+                    </select>
+                </div>
+
+
+                
+                <div id="schoolLevel">
+                    <label for="schoolLevelSelect">School Level:</label>
+                    <select id="schoolLevelSelect" name="schoolLevelSelect">
+                        <option value="first year Secondaire">First year Secondaire</option>
+                        <option value="Second year Secondaire">Second year Secondaire</option>
+                        <option value="Third year Secondaire">Third year Secondaire</option>
+                        <option value="first year High School">First year High School</option>
+                        <option value="Second year High School">Second year High School</option>
+                        <option value="Third year High School">Third year High School</option>
+                        <option value=None>none</option>
+                    </select>
+                </div>
+
+                <label for="Date">Date:</label>
+                <input type="date" id="Date" name="Date" required>
+                <input type="submit" value="Search">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
