@@ -4,7 +4,7 @@ pipeline {
 
       stage('CSM') {
             steps {
-                git branch: 'main', url: 'https://github.com/gymnasiumBanner/default-management.git'
+                git branch: 'master', url: 'https://github.com/gymnasiumBanner/default-management.git'
                 echo 'Pulling the project...'
                 // Ajoutez ici les commandes pour construire votre projet
             }
