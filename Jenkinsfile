@@ -2,13 +2,19 @@ pipeline {
     agent any
     stages {
 
-      stage('CSM') {
+      stage('Clone Repository') {
             steps {
-                
-                echo 'Pulling the project...'
-                // Ajoutez ici les commandes pour construire votre projet
+                git branch: 'master', url: 'https://github.com/aymenlamkhanet/school-management.git'
             }
         }
+
+        stage('Verify Folder Structure') {
+            steps {
+                sh 'ls -R'  // Debug: List all files to confirm paths
+            }
+        }
+
+        
         stage('Build') {
             steps {
                 echo "Building.."
